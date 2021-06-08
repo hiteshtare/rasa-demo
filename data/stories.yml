@@ -8,6 +8,11 @@ stories:
       - intent: mood_great
       - action: utter_happy
 
+  - story: hello world path
+    steps:
+      - intent: hello_world
+      - action: utter_hello_world
+
   - story: sad path 1
     steps:
       - intent: greet
