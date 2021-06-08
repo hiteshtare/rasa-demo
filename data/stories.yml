@@ -11,7 +11,7 @@ stories:
   - story: hello world path
     steps:
       - intent: hello_world
-      - action: utter_hello_world
+      - action: action_hello_world
 
   - story: sad path 1
     steps:
