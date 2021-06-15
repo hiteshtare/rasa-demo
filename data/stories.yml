@@ -13,6 +13,11 @@ stories:
       - intent: hello_world
       - action: action_hello_world
 
+  - story: search restaurant path
+    steps:
+      - intent: search_restaurant
+      - action: action_search_restaurant
+
   - story: sad path 1
     steps:
       - intent: greet

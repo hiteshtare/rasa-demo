@@ -26,6 +26,7 @@ from rasa_sdk.executor import CollectingDispatcher
 #
 #         return []
 
+
 class ActionHelloWorld(Action):
 
     def name(self) -> Text:
@@ -36,5 +37,37 @@ class ActionHelloWorld(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message(text="Hello World from first action!")
+
+        return []
+
+
+class ActionSearchRestaurant(Action):
+
+    def name(self) -> Text:
+        return "action_search_restaurant"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        entities = tracker.latest_message['entities']
+
+        for e in entities:
+            if e['entity'] == 'hotel':
+                name = e['value']
+
+            if name == 'indian':
+                message = 'Indian1, Indian2, Indian3, Indian4'
+
+            if name == 'chinese':
+                message = 'Chinese1, Chinese2, Chinese3'
+
+            if name == 'italian':
+                message = 'Italian1, Italian2'
+
+            if name == 'thai':
+                message = 'Thai1'
+
+        dispatcher.utter_message(message)
 
         return []
