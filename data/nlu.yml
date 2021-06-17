@@ -104,3 +104,13 @@ nlu:
       - show me [chinese](hotel) restaurant
       - show me [italian](hotel) restaurant
       - show me [thai](hotel) restaurant
+      -
+  - intent: covid_state
+    examples: |
+      - [goa](state) 
+      - [maharashtra](state)
+      - [gujarat](state)
+      - [karnataka](state)
+      - [punjab](state)
+      - [west bengal](state)
+      - [india](state)

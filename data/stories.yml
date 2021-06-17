@@ -18,6 +18,11 @@ stories:
       - intent: search_restaurant
       - action: action_search_restaurant
 
+  - story: covid tracker path
+    steps:
+      - intent: covid_state
+      - action: action_covid_tracker
+
   - story: sad path 1
     steps:
       - intent: greet
